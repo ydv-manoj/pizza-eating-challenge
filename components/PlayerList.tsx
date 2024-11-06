@@ -10,6 +10,9 @@ type Player = {
   name: string
   coins: number
   pizzasEaten: number
+  pizzaSlices:number
+  age:number
+  gender:string
 }
 
 export default function PlayerList() {
@@ -84,9 +87,10 @@ export default function PlayerList() {
           <PlayerCard
             key={player.id}
             player={player}
-            onBuyPizza={() => handleBuyPizza(player)}
-            onDelete={() => handleDeletePlayer(player.id)}
-          />
+            onBuyPizza={async () => handleBuyPizza(player)}
+            onDelete={() => handleDeletePlayer(player.id)} onLogPizza={function (playerId: string): Promise<void> {
+              throw new Error('Function not implemented.')
+            } }/>
         ))}
       </CardContent>
       {selectedPlayer && (

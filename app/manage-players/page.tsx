@@ -11,6 +11,8 @@ type Player = {
   coins: number
   pizzasEaten: number
   pizzaSlices: number
+  age:number
+  gender:string
 }
 
 export default function ManagePlayers() {
@@ -99,7 +101,7 @@ export default function ManagePlayers() {
           <Pizza className="ml-4 text-yellow-400" />
         </h1>
         <p className="text-xl text-red-700 mb-8">
-          Buy pizzas, log progress, and track your players' stats!
+          Buy pizzas, log progress, and track your players&apos stats!
         </p>
       </div>
       <Card className="w-full max-w-4xl mx-auto bg-white/80 backdrop-blur-sm shadow-xl border-2 border-red-200">

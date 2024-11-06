@@ -13,6 +13,8 @@ type PlayerCardProps = {
     coins: number
     pizzasEaten: number
     pizzaSlices: number
+    age:number
+    gender:string
   }
   onBuyPizza: (playerId: string) => Promise<void>
   onLogPizza: (playerId: string) => Promise<void>
@@ -26,7 +28,9 @@ export default function PlayerCard({ player, onBuyPizza, onLogPizza, onDelete }:
   return (
     <Card className="w-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-red-100 hover:border-red-300">
       <CardHeader className="bg-red-50">
-        <CardTitle className="text-xl font-bold text-red-600">{player.name}</CardTitle>
+        <CardTitle className="text-xl font-bold text-red-600">{player.name} {player.age}</CardTitle>
+        <p>{player.age} {player.gender==="female" ? "F" : "M"}</p>
+        <p></p>
       </CardHeader>
       <CardContent className="p-6">
         <div className="flex flex-col gap-4">

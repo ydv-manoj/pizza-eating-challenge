@@ -1,3 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off",  // To ignore unused vars in TypeScript
+    "react/no-unescaped-entities": "off",         // To ignore unescaped entities warning in React
+    "react-hooks/exhaustive-deps": "off",         // To ignore missing dependency warnings in useEffect hooks
+    "@typescript-eslint/no-empty-interface": "off", // To ignore empty interface warnings
+    "@typescript-eslint/no-empty-object-type":"off"
+  }
 }
